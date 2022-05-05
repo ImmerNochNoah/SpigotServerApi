@@ -27,5 +27,6 @@ ServerAPI.getPlayerNextLevelXP(uuid);
 
 ServerAPI.addCoins(uuid, coins);
 ServerAPI.addPlayerXP(player, coins);
+
 ServerAPI.removeCoins(uuid, coins);
 ```
