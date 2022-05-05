@@ -19,7 +19,7 @@ Sie beinhaltet ein Basic Coin und Level System.
 ```java
 import de.immernochnoah.api.ServerAPI;
 
-ServerAPI.getPrefix(uuid);
+ServerAPI.getPrefix();
 ServerAPI.getPlayerCoins(uuid);
 ServerAPI.getPlayerLevel(uuid);
 ServerAPI.getPlayerXP(uuid);
