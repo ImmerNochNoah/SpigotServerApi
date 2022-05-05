@@ -1,0 +1,8 @@
+name: SenoxPlaysAPI
+author: ImmerNochNoah
+main: de.immernochnoah.api.ServerAPI
+version: 1.0
+
+commands:
+  level:
+  coins:
