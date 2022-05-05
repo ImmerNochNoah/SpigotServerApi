@@ -1,6 +1,7 @@
 package de.immernochnoah.api.mysql.chach;
 
 import de.immernochnoah.api.ServerAPI;
+import de.immernochnoah.api.file_system.File_Manager;
 import de.immernochnoah.api.mysql.SqlSync;
 import org.bukkit.entity.Player;
 
@@ -30,7 +31,14 @@ public class Garbage_Collector {
         player_coins.put(uuid, sql.getMysqlData("coins", uuid));
         player_level.put(uuid, sql.getMysqlData("level", uuid));
         player_xp.put(uuid, sql.getMysqlData("level_xp", uuid));
-        player_next_level_xp.put(uuid, sql.getMysqlData("next_level_xp", uuid));
+
+        int i = sql.getMysqlData("next_level_xp", uuid);
+        if (i == 0) {
+            File_Manager fm = new File_Manager();
+            player_next_level_xp.put(uuid, Integer.valueOf(fm.getConfigText("LEVEL SYSTEM", "Next Level XP")));
+        } else {
+            player_next_level_xp.put(uuid, i);
+        }
     }
 
     public void syncPlayerDataToDatabase(Player p) {

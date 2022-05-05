@@ -19,7 +19,8 @@ public class Config_File {
             fm.saveConfig("MYSQL");
         }
         if(!fm.configIsExisting("LEVEL SYSTEM")) {
-            fm.addConfigText("Next Level XP", "1000");
+            fm.addConfigText("Next Level XP", "75");
+            fm.addConfigText("Next XP Multiplier", "1.2");
             fm.addConfigText("Next Level Text", "&7Du bist nun &aLevel %s!");
             fm.saveConfig("LEVEL SYSTEM");
         }
