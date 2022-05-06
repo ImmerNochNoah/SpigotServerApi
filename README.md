@@ -12,6 +12,7 @@ Sie beinhaltet ein Basic Coin und Level System.
 - Level mit XP und voll einstellbaren Level-UP System
 - Coin System
 - Einstellbare config.yml
+- Einstellbare Nachrichten + Permissions.
 
 
 ## Usage/Examples
