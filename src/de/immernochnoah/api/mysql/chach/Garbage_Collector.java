@@ -19,6 +19,10 @@ public class Garbage_Collector {
         player_coins.replace(uuid, coins);
     }
 
+    public void setCoins(String uuid, int i) {
+        player_coins.replace(uuid, i);
+    }
+
     public void clearAllData() {
         player_coins.clear();
         player_level.clear();

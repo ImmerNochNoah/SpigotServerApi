@@ -2,6 +2,7 @@ package de.immernochnoah.api;
 
 import de.immernochnoah.api.commands.Coins_Cmd;
 import de.immernochnoah.api.commands.Level_Cmd;
+import de.immernochnoah.api.commands.Reload_Cmd;
 import de.immernochnoah.api.events.PlayerJoinEventHandler;
 import de.immernochnoah.api.events.PlayerQuitEventHandler;
 import de.immernochnoah.api.file_system.Config_File;
@@ -33,6 +34,8 @@ public class ServerAPI extends JavaPlugin {
 
         getCommand("level").setExecutor(new Level_Cmd());
         getCommand("coins").setExecutor(new Coins_Cmd());
+        getCommand("api-reload").setExecutor(new Reload_Cmd());
+
         Bukkit.getPluginManager().registerEvents(new PlayerJoinEventHandler(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerQuitEventHandler(), this);
     }
@@ -56,6 +59,11 @@ public class ServerAPI extends JavaPlugin {
     public static void addCoins(String uuid, int i) {
         Garbage_Collector gc = new Garbage_Collector();
         gc.addCoins(uuid, i);
+    }
+
+    public static void setCoins(String uuid, int i) {
+        Garbage_Collector gc = new Garbage_Collector();
+        gc.setCoins(uuid, i);
     }
 
     public static int getPlayerLevel(String uuid) {
