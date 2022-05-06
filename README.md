@@ -25,6 +25,8 @@ ServerAPI.getPlayerLevel(uuid);
 ServerAPI.getPlayerXP(uuid);
 ServerAPI.getPlayerNextLevelXP(uuid);
 
+ServerAPI.setCoins(uuid, coins);
+
 ServerAPI.addCoins(uuid, coins);
 ServerAPI.addPlayerXP(player, coins);
 
